@@ -19,7 +19,9 @@ class _ProductDetailsState extends State<ProductDetails> {
       appBar: AppBar(
         title: const Text('Task'),
       ),
-      body: Center(
+      body:
+
+      Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(

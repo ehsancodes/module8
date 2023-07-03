@@ -1,5 +1,6 @@
+
 import 'dart:ui';
-import 'taskscreen.dart';
+
 
 import 'package:flutter/material.dart';
 class Todo {
@@ -46,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (context, index) {
           return ListTile(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(
-                  builder:(context) => ProductDetails()));
-              // showDetailTodoModalSheet();
+              // Navigator.push(context, MaterialPageRoute(
+              //     builder:(context) => ProductDetails()));
+               showDetailTodoModalSheet();
             },
             onLongPress: () {
               todos[index].isDone = !todos[index].isDone;
@@ -95,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void showDetailTodoModalSheet() {
     showModalBottomSheet(
         context: context,
-        builder: (BuildContext) {
+        builder: (Todo) {
           return Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
